@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
+    int x;
     Utils utils;
     Magazin magazin(utils);
     Meniu meniu(magazin);
