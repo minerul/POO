@@ -1,11 +1,10 @@
-#include "Meniu.h"
+#include "Menu/Menu.h"
+#include "Store/Store.h"
 using namespace std;
 
 int main() {
-    int x;
-    Utils utils;
-    Magazin magazin(utils);
-    Meniu meniu(magazin);
+    Store store;
+    Menu meniu(store);
     meniu.start();
     return 0;
 }

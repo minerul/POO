@@ -4,16 +4,15 @@
 #define POO_MENIU_H
 
 #include <iostream>
-#include "Magazin/Magazin.h"
-
-
+#include "../Store/Store.h"
+#include "../Utils/Utils.h"
 using namespace std;
 
-class Meniu {
+class Menu {
 
-    Magazin magazin;
-    Utils utils=magazin.getUtils();
-    const string TEXT_OPTIUNI = "-----------------------------------------\n"
+    Store store;
+    Utils utils;
+    const string OPTION_TEXT = "-----------------------------------------\n"
                                 "Apasa tasta corespunzatoare actiunii pe care doresti sa o faci:\n"
                                 "1.Adauga produs.\n"
                                 "2.Vezi produsele din magazin.\n"
@@ -22,27 +21,17 @@ class Meniu {
                                 "9.Inchide meniu.\n";
 public:
 
-    Meniu(const Magazin &magazin);
+    Menu(const Store &store);
 
 
 
     void start();
 
-    void procesareOptiune(int optiune);
+    void processOption(int optiune);
 
-    void continua();
+    void goForward();
 
-    const Magazin &getMagazin() const;
-
-    void setMagazin(const Magazin &magazin);
-
-    const string &getTextOptiuni() const;
-
-    virtual ~Meniu();
-
-    bool operator==(const Meniu &rhs) const;
-
-    bool operator!=(const Meniu &rhs) const;
+    virtual ~Menu();
 };
 
 

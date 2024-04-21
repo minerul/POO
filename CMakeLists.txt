@@ -1,14 +1,16 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.25)
 project(POO)
 
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(POO main.cpp
-        Magazin/Produs.cpp
-        Magazin/Produs.h
-        Meniu.cpp
-        Meniu.h
-        Magazin/Magazin.cpp
-        Magazin/Magazin.h
-        Utils.cpp
-        Utils.h)
+        Store/Product/Product.cpp
+        Store/Product/Product.h
+        Menu/Menu.cpp
+        Menu/Menu.h
+        Store/Store.cpp
+        Store/Store.h
+        Utils/Utils.cpp
+        Utils/Utils.h Store/Product/ProductService.cpp Store/Product/ProductService.h
+        Utils/consts.cpp
+        Utils/consts.h)
