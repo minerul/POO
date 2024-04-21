@@ -52,7 +52,6 @@ void ProductService::showProducts() {
 }
 void ProductService::changePrice() {
     showProducts();
-
     cout << "Alege un element din lista utilizand tasta corespunzatoare.\n";
     int option = utils.readOption();
     if (option != -1 && utils.isNumberInInterval(option, 1, products.size())) {

@@ -28,6 +28,20 @@ int Utils::readOption() {
     return -1;
 }
 
+int Utils::readOption(int st, int dr) {
+    string option;
+    cin >> option;
+    try {
+        int optionInt = stoi(option);
+        if (optionInt >= st && optionInt <= dr)
+            return optionInt;
+        else cout<<"Nu ai introdus un numar valid!\n";
+    } catch (const std::invalid_argument &e) {
+        cout << "Nu ai introdus un numar!\n";
+    }
+    return -1;
+}
+
 bool Utils::isNumberInInterval(int x, int st, int dr) {
     if (x >= st && x <= dr)
         return true;

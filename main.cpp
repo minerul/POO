@@ -1,11 +1,14 @@
-#include "Menu/Menu.h"
+#include "Meniu/managerm.h"
 #include "Store/Store.h"
+#include "Meniu/Menu.h"
+
 using namespace std;
 
 int main() {
-    Store store;
-    Menu meniu(store);
-    meniu.start();
+    //Store store;
+    //managerm meniu(store);
+    Menu menu;
+    menu.start();
     return 0;
 }
 // poate fac sa poti salva magazinul, si sa alegi o salvare, sau sa stergi salvari, admin console?
