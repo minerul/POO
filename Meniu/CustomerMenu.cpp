@@ -26,6 +26,7 @@ void CustomerMenu::processOption(int optiune) {
             break;
         case 1:
             //adauga produs in cosstore.addProduct();
+            store.addProductToCart();
             goForward();
             break;
         case 2:

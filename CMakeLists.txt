@@ -21,4 +21,8 @@ add_executable(POO main.cpp
         Meniu/ManagerMenu.cpp
         Meniu/ManagerMenu.h
         Meniu/CustomerMenu.cpp
-        Meniu/CustomerMenu.h)
+        Meniu/CustomerMenu.h
+        Cart/Cart.cpp
+        Cart/Cart.h
+        Cart/CartService.cpp
+        Cart/CartService.h)

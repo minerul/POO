@@ -6,9 +6,12 @@
 #define POO_MAGAZIN_H
 
 #include "./Product/ProductService.h"
+#include "../Cart/CartService.h"
 
 class Store {
+    Utils utils;
     ProductService productService;
+    CartService cartService;
 public:
     const ProductService &getProductService() const;
 
@@ -18,6 +21,8 @@ public:
     void showProducts();
 
     void addProduct();
+
+    void addProductToCart();
 
     bool operator==(const Store &rhs) const;
 

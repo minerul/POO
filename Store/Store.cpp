@@ -32,4 +32,14 @@ const ProductService &Store::getProductService() const {
     return productService;
 }
 
+void Store::addProductToCart() {
+    vector <Product> products = productService.showProducts();
+    int option = utils.readOption();
+    cartService.addProductToCart(products[option-1]);
+    for(int i=0;i<cartService.getCart().getProducts().size();i++)
+        cout<<cartService.getCart().getProducts()[i];
+}
+//showCart, elimina, register,
+// fac store.delete pt polimorfism gen sterg cart sau produs
+
 

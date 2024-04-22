@@ -24,7 +24,7 @@ public:
 
     void changePrice();
 
-    void showProducts();
+    vector <Product> showProducts();
 
     virtual ~ProductService();
 
