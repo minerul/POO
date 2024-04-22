@@ -6,8 +6,8 @@
 #include <iostream>
 using namespace std;
 
-CustomerMenu::CustomerMenu() {
+CustomerMenu::CustomerMenu(const Store &store) : Menu(store) {
 }
 void CustomerMenu::start() {
-    cout<<"customer";
+    cout<<CUSTOMER_OPTION_TEXT;
 }

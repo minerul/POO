@@ -6,11 +6,12 @@
 #define POO_MAGAZIN_H
 
 #include "./Product/ProductService.h"
+
 class Store {
     ProductService productService;
-
 public:
-    Store();
+    Store()=default;
+    Store(const Store& other);
 
     void showProducts();
 
@@ -25,7 +26,7 @@ public:
 
     void remove();
 
-    vector <Product> loadInitialProducts();
+    vector<Product> loadInitialProducts();
 
 
     virtual ~Store();

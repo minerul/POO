@@ -1,8 +1,15 @@
 #include "Store.h"
 #include <iostream>
 
-Store::Store() {
-    this->productService = ProductService();
+//Store::Store() {
+//    this->productService = ProductService();
+//}
+// Default constructor
+//Store() : productService() {} // Initialize ProductService
+
+// Copy constructor (performs deep copy)
+Store::Store(const Store& other) {
+    productService = other.productService;  // Shallow copy for ProductService
 }
 
 Store::~Store() {}
