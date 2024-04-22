@@ -4,9 +4,8 @@
 using namespace std;
 
 int main() {
-    Store store;
-    store.loadInitialProducts();
-    //store.showProducts();
+    ProductService productService;
+    Store store(productService);
     Menu menu(store);
     menu.start();
     return 0;

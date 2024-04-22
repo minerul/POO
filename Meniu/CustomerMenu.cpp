@@ -8,12 +8,11 @@ using namespace std;
 
 
 CustomerMenu::CustomerMenu(const Store &store) : Menu(store) { // copy
-    this->store = Store(store);
 }
 void CustomerMenu::start() {
     while (true) {
         cout << CUSTOMER_OPTION_TEXT;
-        int option = utils.readOption(0, 2);
+        int option = utils.readOption(0, 3);
         if (option != 0)
             processOption(option);
         else break;
@@ -25,12 +24,15 @@ void CustomerMenu::processOption(int optiune) {
             goForward();
             break;
         case 1:
-            //adauga produs in cosstore.addProduct();
             store.addProductToCart();
             goForward();
             break;
         case 2:
-            //elimina produs din cos
+            store.removeItemFromCart();
+            goForward();
+            break;
+        case 3:
+            store.showCart();
             goForward();
             break;
     }

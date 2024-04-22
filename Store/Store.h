@@ -17,12 +17,17 @@ public:
 
     Store()=default;
     Store(const Store& other);
+    Store(ProductService productService);
 
     void showProducts();
 
     void addProduct();
 
     void addProductToCart();
+
+    void showCart();
+
+    void remove();
 
     bool operator==(const Store &rhs) const;
 
@@ -31,8 +36,6 @@ public:
 
     void changePrice();
 
-    void remove();
-
 //    vector<Product> loadInitialProducts();
 
 
@@ -40,6 +43,8 @@ public:
 
 
     void loadInitialProducts();
+
+    void removeItemFromCart();
 };
 
 

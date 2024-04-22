@@ -7,13 +7,13 @@
 
 ProductService::ProductService() {
     utils = Utils();
-    //products = loadInitialProducts();
+    products = loadInitialProducts();
 }
 ProductService::ProductService(const ProductService& other) {
     products = other.getProducts();
 }
 
-void ProductService::loadInitialProducts() {
+vector<Product> ProductService::loadInitialProducts() {
     vector<string> text = utils.readFile(FILE_NAME);
     vector<Product> produseInitiale;
     for (auto &linie: text) {
@@ -24,7 +24,7 @@ void ProductService::loadInitialProducts() {
         Product produs(numeProdus, pretProdus);
         produseInitiale.push_back(produs);
     }
-    products = produseInitiale;
+    return produseInitiale;
 }
 
 
