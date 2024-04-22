@@ -10,6 +10,8 @@
 class Store {
     ProductService productService;
 public:
+    const ProductService &getProductService() const;
+
     Store()=default;
     Store(const Store& other);
 
@@ -26,11 +28,13 @@ public:
 
     void remove();
 
-    vector<Product> loadInitialProducts();
+//    vector<Product> loadInitialProducts();
 
 
     virtual ~Store();
 
+
+    void loadInitialProducts();
 };
 
 

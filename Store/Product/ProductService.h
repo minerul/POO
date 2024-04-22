@@ -30,7 +30,7 @@ public:
 
     const vector<Product> &getProducts() const;
 
-    std::vector<Product> loadInitialProducts();
+    void loadInitialProducts();
 
     bool checkDuplicates(Product product);
 

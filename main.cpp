@@ -6,12 +6,8 @@ using namespace std;
 
 int main() {
     Store store;
-//    store.addProduct();
-//    store.addProduct();
-//    store.showProducts();
-//    Store store1=store;
-//    store1.showProducts();
-    //managerm meniu(store);
+    store.loadInitialProducts();
+    store.showProducts();
     Menu menu(store);
     menu.start();
     return 0;

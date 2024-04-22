@@ -1,18 +1,16 @@
 #include "Store.h"
 #include <iostream>
 
-//Store::Store() {
-//    this->productService = ProductService();
-//}
-// Default constructor
-//Store() : productService() {} // Initialize ProductService
 
-// Copy constructor (performs deep copy)
 Store::Store(const Store& other) {
-    productService = other.productService;  // Shallow copy for ProductService
+    productService = other.getProductService();  // Shallow copy for ProductService
 }
 
 Store::~Store() {}
+
+void Store::loadInitialProducts(){
+    productService.loadInitialProducts();
+}
 
 void Store::addProduct() {
     productService.addProduct();
@@ -29,4 +27,9 @@ void Store::changePrice() {
 void Store::remove() {
     productService.removeProduct();
 }
+
+const ProductService &Store::getProductService() const {
+    return productService;
+}
+
 
