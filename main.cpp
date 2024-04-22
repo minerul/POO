@@ -1,4 +1,3 @@
-#include "Meniu/managerm.h"
 #include "Store/Store.h"
 #include "Meniu/Menu.h"
 
@@ -7,7 +6,7 @@ using namespace std;
 int main() {
     Store store;
     store.loadInitialProducts();
-    store.showProducts();
+    //store.showProducts();
     Menu menu(store);
     menu.start();
     return 0;
