@@ -1,12 +1,16 @@
 //
 // Created by Samer El Abassi on 20.04.2024.
 //
-
+#include <memory>
 #include "ProductService.h"
-#include "../../Utils/consts.h">
+#include "../../Utils/consts.h"
+
 ProductService::ProductService() {
     utils = Utils();
-    products = loadInitialProducts();
+    //products = loadInitialProducts();
+}
+ProductService::ProductService(const ProductService& other) {
+    products = other.getProducts();
 }
 
 vector<Product> ProductService::loadInitialProducts() {
@@ -78,4 +82,8 @@ void ProductService::removeProduct() {
 
 ProductService::~ProductService() {
 
+}
+
+const vector<Product> &ProductService::getProducts() const {
+    return products;
 }

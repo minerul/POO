@@ -11,12 +11,12 @@
 #include "../../Utils/Utils.h"
 class ProductService {
 
-    std::vector<Product> products;
+    vector<Product> products;
     Utils utils;
 
 public:
     ProductService();
-
+    ProductService(const ProductService& other);
     void addProduct(Product product);
     void addProduct();
 
@@ -27,6 +27,9 @@ public:
     void showProducts();
 
     virtual ~ProductService();
+
+    const vector<Product> &getProducts() const;
+
     std::vector<Product> loadInitialProducts();
 
     bool checkDuplicates(Product product);
