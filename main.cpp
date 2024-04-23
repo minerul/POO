@@ -7,7 +7,7 @@ int main() {
     ProductService productService;
     CartService cartService;
     RegisterService registerService(&cartService);
-    Store store(productService, cartService, registerService);
+    Store store(productService, &cartService, registerService);
     MainMenu menu(store);
     menu.start();
     return 0;

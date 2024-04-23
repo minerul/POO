@@ -7,6 +7,17 @@
 RegisterService::RegisterService(CartService *cartService): cartService(cartService) {
 }
 void RegisterService::buyCart() {
+    Cart cart = cartService->getCart();
+    cartService->showCart();
+    //Payment payment = paymentService.pay(cart);
+    //receiptService.createReceipt();
+    //paymentService.pay(cart), REST daca e cash, metoda plata
+    //in payment am o metoda de plata si bani initiali, bani ramasi, rest
+    //dupa fac pay
+    //payment = paymentService.getPayment
+    //receiptService.createReceipt(cart, paymentMethod)
+    //ReceiptService.afiseazaBon()->ultimul din lista;
+    //in receptService las vector <receipt>
     cartService->emptyCart();
 }
 

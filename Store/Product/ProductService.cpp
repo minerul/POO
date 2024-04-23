@@ -49,6 +49,12 @@ bool ProductService::checkDuplicates(Product product) {
     }
     return false;
 }
+vector <Product> ProductService::showProducts(vector <Product> productList) {
+    for (int i = 0; i < productList.size(); i++) {
+        cout << i + 1 << ". " << productList[i];
+    }
+    return productList;
+}
 vector <Product> ProductService::showProducts() {
     for (int i = 0; i < products.size(); i++) {
         cout << i + 1 << ". " << products[i];

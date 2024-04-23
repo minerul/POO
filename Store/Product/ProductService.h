@@ -35,6 +35,7 @@ public:
     bool checkDuplicates(Product product);
 
 
+    vector<Product> showProducts(vector<Product> productList);
 };
 
 

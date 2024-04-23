@@ -37,18 +37,18 @@ ProductService Store::getProductService() const {
 void Store::addProductToCart() {
     vector<Product> products = productService.showProducts();
     int option = utils.readOption();
-    cartService.addProductToCart(products[option - 1]);
+    cartService->addProductToCart(products[option - 1]);
 }
 
 
 void Store::showCart() {
-    cartService.showCart();
+    cartService->showCart();
 }
 
 void Store::removeItemFromCart() {
-    vector<Product> products = cartService.showCart();
+    vector<Product> products = cartService->showCart();
     int option = utils.readOption();
-    cartService.deleteProduct(option - 1);
+    cartService->deleteProduct(option - 1);
 }
 
 void Store::buyCart() {
@@ -56,22 +56,25 @@ void Store::buyCart() {
 }
 
 void Store::emptyCart() {
-    cartService.emptyCart();
+    cartService->emptyCart();
 }
 
-Store::Store(ProductService productService, CartService cartService, RegisterService registerService){
+Store::Store(ProductService productService, CartService *cartService, RegisterService registerService){
     this->productService = productService;
     this->cartService = cartService;
     this->registerService = registerService;
 }
 
-CartService Store::getCartService() const {
+CartService* Store::getCartService() const {
     return cartService;
 }
 
 RegisterService Store::getRegisterService()  {
     return registerService;
 }
+
+
+
 // register,
 // fac store.delete pt polimorfism gen sterg cart sau produs
 // fac register, receipt dupa

@@ -15,18 +15,18 @@
 class Store {
     Utils utils;
     ProductService productService;
-    CartService cartService;
+    CartService *cartService;
     RegisterService registerService;
 public:
     ProductService getProductService() const;
 
-    CartService getCartService() const;
+    CartService* getCartService() const;
 
     Store() = default;
 
     Store(Store &other);
 
-    Store(ProductService productService, CartService cartService, RegisterService registerService);
+    Store(ProductService productService, CartService *cartService, RegisterService registerService);
 
     void showProducts();
 

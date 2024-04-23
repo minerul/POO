@@ -34,4 +34,14 @@ add_executable(POO main.cpp
         Receipt/ReceiptService.h
         Register/RegisterService.cpp
         Register/RegisterService.h
+        Payment/Payment.cpp
+        Payment/Payment.h
+        Payment/PaymentService.cpp
+        Payment/PaymentService.h
+        Payment/Card.cpp
+        Payment/Card.h
+        Payment/Cash.cpp
+        Payment/Cash.h
+        Payment/Revolut.cpp
+        Payment/Revolut.h
 )
