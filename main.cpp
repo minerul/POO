@@ -1,12 +1,12 @@
 #include "Store/Store.h"
-#include "Meniu/Menu.h"
+#include "Meniu/MainMenu.h"
 
 using namespace std;
 
 int main() {
     ProductService productService;
-    Store store(productService);
-    Menu menu(store);
+    Store store(&productService);
+    MainMenu menu(store);
     menu.start();
     return 0;
 }

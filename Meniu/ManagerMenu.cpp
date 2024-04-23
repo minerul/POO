@@ -45,5 +45,3 @@ void ManagerMenu::processOption(int optiune) {
 const Store &ManagerMenu::getStore() const {
     return store;
 }
-
-

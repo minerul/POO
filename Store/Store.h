@@ -10,14 +10,16 @@
 
 class Store {
     Utils utils;
-    ProductService productService;
+    ProductService *productService;
     CartService cartService;
 public:
-    const ProductService &getProductService() const;
+    ProductService *getProductService() const;
 
-    Store()=default;
-    Store(const Store& other);
-    Store(ProductService productService);
+    Store() = default;
+
+    Store(const Store &other);
+
+    Store(ProductService *productService);
 
     void showProducts();
 

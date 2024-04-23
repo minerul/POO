@@ -2,8 +2,8 @@
 #define POO_MANAGERMENU_H
 
 
+#include "../Store/Store.h"
 #include "Menu.h"
-
 class ManagerMenu : public Menu {
 public:
     const Store &getStore() const;
@@ -18,9 +18,13 @@ private:
                                        "0.Inapoi la meniul principal.\n";
 public:
     ManagerMenu(const Store& store);
+
+    ManagerMenu();
+
     void start();
 
     void processOption(int optiune);
+
 };
 
 

@@ -5,6 +5,7 @@
 #include "CartService.h"
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -15,7 +16,10 @@ CartService::CartService() {
 
 void CartService::addProductToCart(Product product) {
     vector<Product> vectorProducts = cart.getProducts();
-    vectorProducts.push_back(product);
+    if (count(vectorProducts.begin(), vectorProducts.end(), product) == 0)
+        vectorProducts.push_back(product);
+    else
+        cout << "Acest produs se afla deja in cos!\n";
     cart.setProducts(vectorProducts);
     setCart(cart);
 }

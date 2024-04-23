@@ -1,33 +1,28 @@
 //
-// Created by alext on 4/21/2024.
+// Created by Samer El Abassi on 23.04.2024.
 //
 
-#ifndef POO_MENU_H
-#define POO_MENU_H
-
+#ifndef MENUPARENT_H
+#define MENUPARENT_H
 
 #include "../Store/Store.h"
 
 class Menu {
-    const string MENU_TEXT = "Alege perspectiva:\n"
-                             "1.Manager.\n"
-                             "2.Client.\n"
-                             "0.Inchide meniul.\n";
 
 protected:
     Store store;
     Utils utils;
+
 public:
-    Menu();
-    Menu(const Store &store);
+    void goForward();
+
     virtual void start();
-    static void goForward();
 
-    bool operator==(const Menu &rhs) const;
+    explicit Menu(const Store &store, const Utils &utils) : store(store), utils(utils) {
+    }
 
-    bool operator!=(const Menu &rhs) const;
-
+    Menu(const Store &store);
 };
 
 
-#endif //POO_MENU_H
+#endif //MENUPARENT_H

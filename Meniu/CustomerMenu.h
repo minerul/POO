@@ -2,11 +2,9 @@
 #define POO_CUSTOMERMENU_H
 
 
+#include "../Store/Store.h"
 #include "Menu.h"
-
 class CustomerMenu : public Menu {
-    Menu menu;
-    Store store;
 public:
     const Store &getStore() const;
 
