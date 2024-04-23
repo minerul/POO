@@ -9,36 +9,36 @@ Store::Store(const Store &other) {
 Store::~Store() {}
 
 void Store::loadInitialProducts() {
-    productService->loadInitialProducts();
+    productService.loadInitialProducts();
 }
 
 void Store::addProduct() {
-    productService->addProduct();
+    productService.addProduct();
 }
 
 void Store::showProducts() {
-    productService->showProducts();
+    productService.showProducts();
 }
 
 void Store::changePrice() {
-    productService->changePrice();
+    productService.changePrice();
 }
 
 void Store::remove() {
-    productService->removeProduct();
+    productService.removeProduct();
 }
 
-ProductService* Store::getProductService() const {
+ProductService Store::getProductService() const {
     return productService;
 }
 
 void Store::addProductToCart() {
-    vector<Product> products = productService->showProducts();
+    vector<Product> products = productService.showProducts();
     int option = utils.readOption();
     cartService.addProductToCart(products[option - 1]);
 }
 
-Store::Store(ProductService* productService) {
+Store::Store(ProductService productService) {
     this->productService = productService;
 }
 

@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     ProductService productService;
-    Store store(&productService);
+    Store store(productService);
     MainMenu menu(store);
     menu.start();
     return 0;
