@@ -55,6 +55,9 @@ void Store::removeItemFromCart() {
 void Store::buyCart(){
     registerService.buyCart();
 }
+void Store::emptyCart(){
+    cartService.emptyCart();
+}
 // register,
 // fac store.delete pt polimorfism gen sterg cart sau produs
 // fac receipt

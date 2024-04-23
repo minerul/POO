@@ -7,11 +7,13 @@
 
 #include "./Product/ProductService.h"
 #include "../Cart/CartService.h"
+#include "../Register/RegisterService.h"
 
 class Store {
     Utils utils;
     ProductService *productService;
     CartService cartService;
+    RegisterService registerService;
 public:
     ProductService *getProductService() const;
 
@@ -49,6 +51,8 @@ public:
     void removeItemFromCart();
 
     void buyCart();
+
+    void emptyCart();
 };
 
 

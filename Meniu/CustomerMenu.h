@@ -12,9 +12,10 @@ private:
     const string CUSTOMER_OPTION_TEXT = "------------CLIENT------------\n"
                                         "Apasa tasta corespunzatoare actiunii pe care doresti sa o faci:\n"
                                         "1.Adauga produs in cos.\n"
-                                        "2.Elimina produs din cos.\n"
-                                        "3.Afiseaza cosul.\n"
-                                        "4.Achizitioneaza cosul.\n"
+                                        "2.Afiseaza cosul.\n"
+                                        "3.Elimina un produs din cos\n"
+                                        "4.Goleste cosul.\n"
+                                        "5.Achizitioneaza cosul.\n"
                                         "0.Inapoi la meniul principal\n";
 public:
     CustomerMenu(const Store& store);

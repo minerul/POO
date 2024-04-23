@@ -6,8 +6,13 @@
 #define POO_REGISTERSERVICE_H
 
 
-class RegisterService {
+#include "../Cart/CartService.h"
 
+class RegisterService {
+    CartService cartService;
+public:
+    RegisterService();
+    void buyCart();
 };
 
 

@@ -3,3 +3,10 @@
 //
 
 #include "RegisterService.h"
+
+RegisterService::RegisterService() {
+
+}
+void RegisterService::buyCart() {
+    cartService.emptyCart();
+}

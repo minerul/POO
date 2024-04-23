@@ -18,9 +18,12 @@ public:
 
     void setCart(const Cart &cart);
 
+    void emptyCart();
+
     const Cart &getCart() const;
 
     vector<Product> showCart();
+
 
     void deleteProduct(int indice);
 };
