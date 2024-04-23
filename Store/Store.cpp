@@ -2,8 +2,10 @@
 #include <iostream>
 
 
-Store::Store(const Store &other) {
-    productService = other.getProductService();  // Shallow copy for ProductService
+Store::Store(Store &other){
+    productService = other.getProductService();
+    registerService = other.getRegisterService();
+    cartService = other.getCartService();// Shallow copy for ProductService
 }
 
 Store::~Store() {}
@@ -38,9 +40,6 @@ void Store::addProductToCart() {
     cartService.addProductToCart(products[option - 1]);
 }
 
-Store::Store(ProductService productService) {
-    this->productService = productService;
-}
 
 void Store::showCart() {
     cartService.showCart();
@@ -52,14 +51,30 @@ void Store::removeItemFromCart() {
     cartService.deleteProduct(option - 1);
 }
 
-void Store::buyCart(){
+void Store::buyCart() {
     registerService.buyCart();
 }
-void Store::emptyCart(){
+
+void Store::emptyCart() {
     cartService.emptyCart();
+}
+
+Store::Store(ProductService productService, CartService cartService, RegisterService registerService){
+    this->productService = productService;
+    this->cartService = cartService;
+    this->registerService = registerService;
+}
+
+CartService Store::getCartService() const {
+    return cartService;
+}
+
+RegisterService Store::getRegisterService()  {
+    return registerService;
 }
 // register,
 // fac store.delete pt polimorfism gen sterg cart sau produs
-// fac receipt
+// fac register, receipt dupa
+// register emptyCart, dupa receipt, face plata?
 
 

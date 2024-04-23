@@ -18,9 +18,6 @@ class MainMenu : public Menu {
                              "0.Inchide meniul.\n";
     ManagerMenu managerMenu;
     CustomerMenu customerMenu;
-protected:
-    Store store;
-    Utils utils;
 
 public:
     MainMenu();

@@ -10,9 +10,9 @@ void Menu::goForward() {
     cin.get();
 }
 
-Menu::Menu(const Store &store) {
-    this->store = store;
-    this->utils = Utils();
+//MainMenu::MainMenu(const Store &store) : Menu(store), customerMenu(store), managerMenu(store) {
+//}
+Menu::Menu(const Store &store) : store(const_cast<Store &>(store)) {
 }
 
 void Menu::start() {

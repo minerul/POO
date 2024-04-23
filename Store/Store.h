@@ -1,4 +1,7 @@
 #include "Product/Product.h"
+
+
+
 #include <vector>
 #include <ostream>
 
@@ -17,11 +20,13 @@ class Store {
 public:
     ProductService getProductService() const;
 
+    CartService getCartService() const;
+
     Store() = default;
 
-    Store(const Store &other);
+    Store(Store &other);
 
-    Store(ProductService productService);
+    Store(ProductService productService, CartService cartService, RegisterService registerService);
 
     void showProducts();
 
@@ -40,7 +45,6 @@ public:
 
     void changePrice();
 
-//    vector<Product> loadInitialProducts();
 
 
     virtual ~Store();
@@ -53,6 +57,9 @@ public:
     void buyCart();
 
     void emptyCart();
+
+
+    RegisterService getRegisterService() ;
 };
 
 

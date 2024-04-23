@@ -9,10 +9,17 @@
 #include "../Cart/CartService.h"
 
 class RegisterService {
-    CartService cartService;
+
+
+
+    CartService *cartService;
 public:
+    RegisterService(RegisterService &other);
+    RegisterService(CartService *cartService);
     RegisterService();
     void buyCart();
+
+    CartService *getCartService() const;
 };
 
 

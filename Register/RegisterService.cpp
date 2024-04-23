@@ -4,9 +4,22 @@
 
 #include "RegisterService.h"
 
-RegisterService::RegisterService() {
-
+RegisterService::RegisterService(CartService *cartService): cartService(cartService) {
 }
 void RegisterService::buyCart() {
-    cartService.emptyCart();
+    cartService->emptyCart();
 }
+
+RegisterService::RegisterService() {
+}
+
+CartService *RegisterService::getCartService() const {
+    return cartService;
+}
+
+RegisterService::RegisterService( RegisterService &other){
+    cartService = other.getCartService();
+}
+//RegisterService::RegisterService(CartService &cartService) : cartService(cartService) {
+//
+//}

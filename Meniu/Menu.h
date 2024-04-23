@@ -10,7 +10,7 @@
 class Menu {
 
 protected:
-    Store store;
+    Store &store;
     Utils utils;
 
 public:
@@ -18,7 +18,7 @@ public:
 
     virtual void start();
 
-    explicit Menu(const Store &store, const Utils &utils) : store(store), utils(utils) {
+    explicit Menu(Store &store, const Utils &utils) : store(store), utils(utils) {
     }
 
     Menu(const Store &store);
