@@ -14,6 +14,7 @@ private:
                                         "1.Adauga produs in cos.\n"
                                         "2.Elimina produs din cos.\n"
                                         "3.Afiseaza cosul.\n"
+                                        "4.Achizitioneaza cosul.\n"
                                         "0.Inapoi la meniul principal\n";
 public:
     CustomerMenu(const Store& store);

@@ -47,6 +47,8 @@ public:
     void loadInitialProducts();
 
     void removeItemFromCart();
+
+    void buyCart();
 };
 
 

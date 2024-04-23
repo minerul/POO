@@ -51,6 +51,10 @@ void Store::removeItemFromCart() {
     int option = utils.readOption();
     cartService.deleteProduct(option - 1);
 }
+
+void Store::buyCart(){
+    registerService.buyCart();
+}
 // register,
 // fac store.delete pt polimorfism gen sterg cart sau produs
 // fac receipt

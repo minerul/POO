@@ -13,7 +13,7 @@ CustomerMenu::CustomerMenu(const Store &store) : Menu(store) { // copy
 void CustomerMenu::start() {
     while (true) {
         cout << CUSTOMER_OPTION_TEXT;
-        int option = utils.readOption(0, 3);
+        int option = utils.readOption(0, 4);
         if (option != 0)
             processOption(option);
         else break;
@@ -34,6 +34,10 @@ void CustomerMenu::processOption(int optiune) {
             break;
         case 3:
             store.showCart();
+            goForward();
+            break;
+        case 4:
+            //store.buyCart();
             goForward();
             break;
     }
