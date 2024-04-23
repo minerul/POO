@@ -1,11 +1,38 @@
 #include <iostream>
 #include "Cash.h"
+
 using namespace std;
 
-void Cash::read(){
-    cin>>Introdu suma cash pe care vrei sa o introduci:
+int checkInt(string x) {
+    try {
+        int x_int = stoi(x);
+        return x_int;
+    } catch (const std::invalid_argument &e) {
+        cout << "Nu ai introdus un numar!\n";
+    }
+    return -1;
+}
+
+
+void Cash::read() {
+    string amountString;
+    int amount = -1;
+    while (amount == -1) {
+        cout << "Introdu suma cash:\n";
+        cin >> amountString;
+        amount = checkInt(amountString);
+        //if(amount!=-1 && amount<cartCost){
+          //  cout<<"Nu ai platit suficient!";
+        //}
+    }
+    //this->totalMoney = amount;
+
 }
 
 void Cash::processPayment(int amount) {
-    cout << "Plata in numerar: " << amount << " RON" <<endl;
+    cout << "Plata in numerar: " << amount << " RON\n";
 }
+
+//Cash::Cash(int totalMoney) {
+//    this->totalMoney=totalMoney;
+//}

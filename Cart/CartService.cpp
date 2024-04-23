@@ -37,7 +37,13 @@ vector<Product> CartService::showCart() {
         cout << i + 1 << ". " << getCart().getProducts()[i];
     return getCart().getProducts();
 }
-
+int CartService::checkPrice(){
+    vector<Product> vectorProducts = cart.getProducts();
+    int sum=0;
+    for(const auto & vectorProduct : vectorProducts)
+        sum+=vectorProduct.getPrice();
+    return sum;
+}
 void CartService::deleteProduct(int indice) {
     vector<Product> vectorProducts = cart.getProducts();
     vectorProducts.erase(vectorProducts.begin() + indice + 1);

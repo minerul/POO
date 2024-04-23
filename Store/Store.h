@@ -60,6 +60,8 @@ public:
 
 
     RegisterService getRegisterService() ;
+
+    void checkCartPrice();
 };
 
 

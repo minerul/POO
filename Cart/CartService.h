@@ -26,6 +26,8 @@ public:
 
 
     void deleteProduct(int indice);
+
+    int checkPrice();
 };
 
 

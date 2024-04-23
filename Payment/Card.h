@@ -10,9 +10,13 @@
 using namespace std;
 
 class Card : public Payment{
-    string cardNumber;
+    int cardNumber;
 public:
+    Card();
+    //Card(int totalMoney);
     void processPayment(int amount);
+
+    void read();
 };
 
 

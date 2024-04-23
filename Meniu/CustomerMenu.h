@@ -15,7 +15,8 @@ private:
                                         "2.Afiseaza cosul.\n"
                                         "3.Elimina un produs din cos\n"
                                         "4.Goleste cosul.\n"
-                                        "5.Achizitioneaza cosul.\n"
+                                        "5.Vezi pretul cosului.\n"
+                                        "6.Achizitioneaza cosul.\n"
                                         "0.Inapoi la meniul principal\n";
 public:
     CustomerMenu(const Store& store);

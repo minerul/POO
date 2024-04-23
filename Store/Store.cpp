@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-Store::Store(Store &other){
+Store::Store(Store &other) {
     productService = other.getProductService();
     registerService = other.getRegisterService();
     cartService = other.getCartService();// Shallow copy for ProductService
@@ -55,21 +55,26 @@ void Store::buyCart() {
     registerService.buyCart();
 }
 
+void Store::checkCartPrice() {
+    int price = cartService->checkPrice();
+    cout << "Pretul cosului este: " << price << '\n';
+}
+
 void Store::emptyCart() {
     cartService->emptyCart();
 }
 
-Store::Store(ProductService productService, CartService *cartService, RegisterService registerService){
+Store::Store(ProductService productService, CartService *cartService, RegisterService registerService) {
     this->productService = productService;
     this->cartService = cartService;
     this->registerService = registerService;
 }
 
-CartService* Store::getCartService() const {
+CartService *Store::getCartService() const {
     return cartService;
 }
 
-RegisterService Store::getRegisterService()  {
+RegisterService Store::getRegisterService() {
     return registerService;
 }
 
