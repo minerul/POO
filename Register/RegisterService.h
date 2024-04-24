@@ -8,12 +8,14 @@
 
 #include "../Cart/CartService.h"
 #include "../Payment/PaymentService.h"
+#include "../Receipt/ReceiptService.h"
 
 class RegisterService {
 
 
 
     CartService *cartService;
+    ReceiptService receiptService;
     PaymentService paymentService;
 public:
     RegisterService(RegisterService &other);

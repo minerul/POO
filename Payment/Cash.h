@@ -12,7 +12,6 @@ class Cash: public Payment {
 public:
     Cash();
 //    Cash(int totalMoney);
-    void processPayment(int amount);
     void read();
 
     int getChange();

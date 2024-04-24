@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-PaymentService::PaymentService() : cash(), card() {
+PaymentService::PaymentService() : cash(), card(), revolut() {
 }
 
 Payment & PaymentService::choosePayment() {
@@ -16,8 +16,8 @@ Payment & PaymentService::choosePayment() {
             return this->cash;
         case 2:
             return this->card;
-        default:
-            return this->cash;
+        case 3:
+            return this->revolut;
     }
 }
 
@@ -28,7 +28,7 @@ int PaymentService::processPayment(Payment &payment) {
     int rest=payment.getChange();
     if(rest!=0)
         cout<<"Restul este: "<<rest<<" lei.\n";
-    return payment.getChange();
+    return rest;
 }
 
 

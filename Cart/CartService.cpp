@@ -52,7 +52,6 @@ void CartService::deleteProduct(int indice) {
 }
 
 void CartService::emptyCart() {
-    cout<<"Cosul a fost golit!\n";
     vector<Product> vectorProducts;
     cart.setProducts(vectorProducts);
     setCart(cart);

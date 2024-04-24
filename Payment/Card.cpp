@@ -13,19 +13,14 @@ int validareNumar(string x){
 }
 
 void Card::read(){
+    cardNumber=-1;
     cout<<"Introdu numarul cardului:\n";
-    string cardNumber;
-    int cardNumberInt=-1;
-    while(cardNumberInt==-1) {
-        cin >> cardNumber;
-        cardNumberInt = validareNumar(cardNumber);
-    }
-    this->cardNumber=cardNumberInt;
+    string cardNumberString;
+    while(cardNumber==-1) {
+        cin >> cardNumberString;
+        cardNumber = validareNumar(cardNumberString);
+    };
 }
-void Card::processPayment(int amount) {
-    cout << "Plata cu cardul: " << amount << " RON\n";
-}
-
 Card::Card() {
 
 }

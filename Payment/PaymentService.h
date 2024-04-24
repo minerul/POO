@@ -15,6 +15,7 @@ class PaymentService {
     Utils utils;
     Cash cash;
     Card card;
+    Revolut revolut;
 public:
     PaymentService();
     Payment & choosePayment();

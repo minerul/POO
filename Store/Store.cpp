@@ -61,6 +61,7 @@ void Store::checkCartPrice() {
 }
 
 void Store::emptyCart() {
+    cout<<"Cosul a fost golit!\n";
     cartService->emptyCart();
 }
 

@@ -30,10 +30,6 @@ void Cash::read() {
 
 }
 
-void Cash::processPayment(int amount) {
-    cout << "Plata in numerar: " << amount << " RON\n";
-}
-
 Cash::Cash() {
 
 }

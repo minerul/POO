@@ -13,7 +13,12 @@ class Receipt {
     int id;
     vector <Product> products;
 public:
-    Receipt();
+    int getId() const;
+
+    const vector<Product> &getProducts() const;
+
+    Receipt(int id, vector <Product> products);
+    friend std::ostream& operator<<(std::ostream& os, const Receipt& receipt);
 };
 
 

@@ -1,6 +1,3 @@
-//
-// Created by alext on 4/23/2024.
-//
 
 #ifndef POO_CARD_H
 #define POO_CARD_H
@@ -14,7 +11,6 @@ class Card : public Payment{
 public:
     Card();
     //Card(int totalMoney);
-    void processPayment(int amount);
 
     void read();
 

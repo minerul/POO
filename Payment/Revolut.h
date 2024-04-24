@@ -7,9 +7,19 @@
 
 
 #include "Payment.h"
+#include <iostream>
 
-class Revolut : Payment {
+using namespace std;
 
+class Revolut : public Payment {
+    string account;
+
+    void read();
+
+    int getChange();
+
+public:
+    Revolut();
 };
 
 
