@@ -16,7 +16,7 @@
 class Store {
     Utils utils;
     ProductService productService;
-    std::unique_ptr<CartService> cartService; // smart pointer
+    CartService *cartService; // smart pointer
     RegisterService registerService;
     ReceiptService receiptService;
 public:

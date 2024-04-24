@@ -24,7 +24,7 @@ public:
     //virtual int getChange(); // card o sa fie 0, cash total-card, cec
     // la card cer IBAN, field nou, cec cer nume
 
-    virtual int getChange();
+    virtual int getChange(); // functie virtuala
 };
 
 

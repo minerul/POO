@@ -10,18 +10,23 @@
 #include "../Store/Product/Product.h"
 
 class Receipt {
-    int id;
+
     vector <Product> products;
     string details;
-public:
-    int getId() const;
+    int id;
+    static int counter; //atribut static
 
+public:
+    static int getCounter();
+    int getId() const;
     const vector<Product> &getProducts() const;
 
-    Receipt(int id, vector <Product> products, string details);
+    Receipt(int id, vector<Product> products, string details);
     friend std::ostream& operator<<(std::ostream& os, const Receipt& receipt);
 
     const string &getDetails() const;
+
+    static void setCounter(int counter);
 };
 
 

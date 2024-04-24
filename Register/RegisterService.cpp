@@ -10,10 +10,9 @@ void RegisterService::buyCart() {
     Cart cart = cartService->getCart();
     Payment &payment = paymentService.choosePayment();
     payment.setCartCost(cartService->checkPrice());
-
     paymentService.processPayment(payment);
-
     receiptService.createReceipt(cart.getProducts(),payment.toString());
+
     cout << "Apasa orice tasta pentru a vizualiza bonul:";
     cin.get();
     cin.get();
@@ -31,6 +30,3 @@ CartService *RegisterService::getCartService() const {
 RegisterService::RegisterService(RegisterService &other) {
     cartService = other.getCartService();
 }
-//RegisterService::RegisterService(CartService &cartService) : cartService(cartService) {
-//
-//}

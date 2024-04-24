@@ -12,10 +12,11 @@ int main() {
     menu.start();
     return 0;
 }
+//goForward
 //--minim o baza de clasa 3 si 3 clase derivate -> menu si payment
 //--o functie virtuala specifica temei -> menu, paymentMethodurile
-//-polimorfism -> utils,
+//--polimorfism -> utils,
 //--apelarea constructorului clasei de baza din constructori ai clasei derivate-> menu, cash, card
 // smart pointers
 //--conversii de tipuri pentru pointeri catre clase->PaymentService::processPayment, caut conversii
-//--suprascris metode cred? si static-> static in utils, metodele <<
+//--suprascris metode cred? si static-> static in utils, metodele <<, atribute static am id in receipt
