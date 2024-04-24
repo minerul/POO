@@ -13,7 +13,7 @@ CustomerMenu::CustomerMenu(const Store &store) : Menu(store) { // copy
 void CustomerMenu::start() {
     while (true) {
         cout << CUSTOMER_OPTION_TEXT;
-        int option = utils.readOption(0, 7);
+        int option = Utils::readOption(0, 7);
         if (option != 0)
             processOption(option);
         else break;

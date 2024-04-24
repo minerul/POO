@@ -64,8 +64,8 @@ vector <Product> ProductService::showProducts() {
 void ProductService::changePrice() {
     showProducts();
     cout << "Alege un element din lista utilizand tasta corespunzatoare.\n";
-    int option = utils.readOption();
-    if (option != -1 && utils.isNumberInInterval(option, 1, products.size())) {
+    int option = Utils::readOption();
+    if (option != -1 && Utils::isNumberInInterval(option, 1, products.size())) {
         cout << "Tasteaza pretul pe care-l doresti:\n";
         int newPrice;
         cin >> newPrice;
@@ -79,8 +79,8 @@ void ProductService::changePrice() {
 void ProductService::removeProduct() {
     showProducts();
     cout << "Alege un element din lista utilizand tasta corespunzatoare.\n";
-    int option = utils.readOption();
-    if (option != -1 && utils.isNumberInInterval(option, 1, products.size())) {
+    int option = Utils::readOption();
+    if (option != -1 && Utils::isNumberInInterval(option, 1, products.size())) {
         products.erase(products.begin() + option - 1);
         cout << "Produsul a fost sters. Lista produselor a devenit:\n";
         showProducts();

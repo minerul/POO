@@ -11,11 +11,7 @@ class Payment {
 protected:
     int totalMoney; // cat platesti
     int cartCost;
-    //Card card;
-    //Cash cash;
-    //Revolut revolut;
 public:
-    //Payment(int totalMoney, int cartCost);
     int getCartCost() const;
 
     void setTotalMoney(int totalMoney);
@@ -23,7 +19,6 @@ public:
     void setCartCost(int cartCost);
 
     virtual string toString();
-    virtual void processPayment();
     virtual void read();
 
     //virtual int getChange(); // card o sa fie 0, cash total-card, cec

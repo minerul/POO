@@ -8,10 +8,11 @@ void RegisterService::viewReceipts(){
 }
 void RegisterService::buyCart() {
     Cart cart = cartService->getCart();
-    //cartService->showCart();
     Payment &payment = paymentService.choosePayment();
     payment.setCartCost(cartService->checkPrice());
-    paymentService.processPayment(payment); // repar sa faca pt toate alea diferite, dupa vad, o dau in bonuri cred
+
+    paymentService.processPayment(payment);
+
     receiptService.createReceipt(cart.getProducts(),payment.toString());
     cout << "Apasa orice tasta pentru a vizualiza bonul:";
     cin.get();

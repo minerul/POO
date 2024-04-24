@@ -9,9 +9,8 @@ public:
 
     vector<string> readFile(string fileName);
     static int readOption();
-    bool isNumberInInterval(int x, int st, int dr);
-
-    int readOption(int st, int dr);
+    static bool isNumberInInterval(int x, int st, int dr);
+    static int readOption(int st, int dr);
 };
 
 

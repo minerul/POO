@@ -36,7 +36,7 @@ ProductService Store::getProductService() const {
 
 void Store::addProductToCart() {
     vector<Product> products = productService.showProducts();
-    int option = utils.readOption();
+    int option = Utils::readOption(); // functie statica
     cartService->addProductToCart(products[option - 1]);
 }
 

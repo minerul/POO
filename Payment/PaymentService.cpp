@@ -13,11 +13,11 @@ Payment & PaymentService::choosePayment() {
     int option=utils.readOption(1,3);
     switch (option) {
         case 1:
-            return this->cash;
+            return static_cast<Payment&>(this->cash); // conversii, mergea si implicit
         case 2:
-            return this->card;
+            return static_cast<Payment&>(this->card);
         case 3:
-            return this->revolut;
+            return static_cast<Payment&>(this->revolut);
     }
 }
 

@@ -12,5 +12,10 @@ int main() {
     menu.start();
     return 0;
 }
-// poate fac sa poti salva magazinul, si sa alegi o salvare, sau sa stergi salvari, admin console?
-// cand adaug pretul unui produs inca nu merge daca bagi string
+//--minim o baza de clasa 3 si 3 clase derivate -> menu si payment
+//--o functie virtuala specifica temei -> menu, paymentMethodurile
+//-polimorfism -> utils,
+//--apelarea constructorului clasei de baza din constructori ai clasei derivate-> menu, cash, card
+// smart pointers
+//--conversii de tipuri pentru pointeri catre clase->PaymentService::processPayment, caut conversii
+//--suprascris metode cred? si static-> static in utils, metodele <<

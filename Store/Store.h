@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <ostream>
+#include <memory>
 
 #ifndef POO_MAGAZIN_H
 #define POO_MAGAZIN_H
@@ -15,7 +16,7 @@
 class Store {
     Utils utils;
     ProductService productService;
-    CartService *cartService;
+    std::unique_ptr<CartService> cartService; // smart pointer
     RegisterService registerService;
     ReceiptService receiptService;
 public:
