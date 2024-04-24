@@ -7,12 +7,14 @@
 
 
 #include "../Cart/CartService.h"
+#include "../Payment/PaymentService.h"
 
 class RegisterService {
 
 
 
     CartService *cartService;
+    PaymentService paymentService;
 public:
     RegisterService(RegisterService &other);
     RegisterService(CartService *cartService);

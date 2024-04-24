@@ -13,3 +13,18 @@ void Payment::processPayment() {
 void Payment::read() {
 
 }
+int Payment::getChange(){
+    return 0;
+}
+
+int Payment::getCartCost() const {
+    return cartCost;
+}
+
+void Payment::setCartCost(int cartCost) {
+    Payment::cartCost = cartCost;
+}
+
+void Payment::setTotalMoney(int totalMoney) {
+    Payment::totalMoney = totalMoney;
+}

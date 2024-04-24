@@ -8,8 +8,10 @@ RegisterService::RegisterService(CartService *cartService): cartService(cartServ
 }
 void RegisterService::buyCart() {
     Cart cart = cartService->getCart();
-    cartService->showCart();
-    //Payment payment = paymentService.pay(cart);
+    //cartService->showCart();
+    Payment &payment = paymentService.choosePayment();
+    payment.setCartCost(cartService->checkPrice());
+    paymentService.processPayment(payment); // repar sa faca pt toate alea diferite, dupa vad, o dau in bonuri cred
     //receiptService.createReceipt();
     //paymentService.pay(cart), REST daca e cash, metoda plata
     //in payment am o metoda de plata si bani initiali, bani ramasi, rest

@@ -17,6 +17,8 @@ public:
     void processPayment(int amount);
 
     void read();
+
+    int getChange();
 };
 
 

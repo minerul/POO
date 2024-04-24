@@ -29,6 +29,9 @@ void Card::processPayment(int amount) {
 Card::Card() {
 
 }
+int Card::getChange(){
+    return 0;
+}
 //Card::Card(int totalMoney) {
 //    this->totalMoney=totalMoney;
 //}

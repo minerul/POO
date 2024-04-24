@@ -21,16 +21,25 @@ void Cash::read() {
         cout << "Introdu suma cash:\n";
         cin >> amountString;
         amount = checkInt(amountString);
-        //if(amount!=-1 && amount<cartCost){
-          //  cout<<"Nu ai platit suficient!";
-        //}
+        if(amount<cartCost){
+            cout<<"Nu ai platit suficient!\n";
+            amount=-1;
+        }
     }
-    //this->totalMoney = amount;
+    this->totalMoney = amount;
 
 }
 
 void Cash::processPayment(int amount) {
     cout << "Plata in numerar: " << amount << " RON\n";
+}
+
+Cash::Cash() {
+
+}
+
+int Cash::getChange() {
+    return totalMoney-cartCost;
 }
 
 //Cash::Cash(int totalMoney) {
