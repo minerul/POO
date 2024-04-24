@@ -54,6 +54,9 @@ void Store::removeItemFromCart() {
 void Store::buyCart() {
     registerService.buyCart();
 }
+void Store::viewReceipts(){
+    registerService.viewReceipts();
+}
 
 void Store::checkCartPrice() {
     int price = cartService->checkPrice();

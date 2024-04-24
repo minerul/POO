@@ -20,6 +20,8 @@ class Revolut : public Payment {
 
 public:
     Revolut();
+
+    string toString();
 };
 
 

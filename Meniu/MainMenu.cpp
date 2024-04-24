@@ -28,7 +28,7 @@ void MainMenu::start() {
             case 2:
                 customerMenu.start();
                 break;
-        }
+            }
     }
 };
 

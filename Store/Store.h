@@ -17,6 +17,7 @@ class Store {
     ProductService productService;
     CartService *cartService;
     RegisterService registerService;
+    ReceiptService receiptService;
 public:
     ProductService getProductService() const;
 
@@ -62,6 +63,8 @@ public:
     RegisterService getRegisterService() ;
 
     void checkCartPrice();
+
+    void viewReceipts();
 };
 
 

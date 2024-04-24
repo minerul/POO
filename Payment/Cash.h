@@ -11,10 +11,11 @@
 class Cash: public Payment {
 public:
     Cash();
-//    Cash(int totalMoney);
     void read();
 
     int getChange();
+
+    string toString();
 };
 
 

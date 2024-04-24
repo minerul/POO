@@ -24,6 +24,8 @@ public:
     void buyCart();
 
     CartService *getCartService() const;
+
+    void viewReceipts();
 };
 
 

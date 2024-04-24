@@ -9,7 +9,7 @@ public:
     const Store &getStore() const;
 
 private:
-    const string MANAGER_OPTION_TEXT = "------------MANAGER------------\n"
+    const string MANAGER_OPTION_TEXT = "----------------------MANAGER----------------------\n"
                                        "Apasa tasta corespunzatoare actiunii pe care doresti sa o faci:\n"
                                        "1.Adauga produs.\n"
                                        "2.Vezi produsele din magazin.\n"

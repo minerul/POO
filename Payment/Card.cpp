@@ -12,6 +12,11 @@ int validareNumar(string x){
     return -1;
 }
 
+string Card::toString(){
+    string s = "Plata card. Numarul cardului: "+ to_string(this->cardNumber)+ ". Pret total: "+to_string(cartCost) +". Suma platita: " + to_string(this->cartCost)+".\n";
+    return s;
+}
+
 void Card::read(){
     cardNumber=-1;
     cout<<"Introdu numarul cardului:\n";

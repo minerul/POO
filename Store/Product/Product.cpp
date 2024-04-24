@@ -36,7 +36,7 @@ void Product::setPrice(int price) {
 }
 
 ostream &operator<<(ostream &os, const Product &product) {
-    os << "Name: " << product.name << ", price: " << product.price << ".\n";
+    os << "Nume: " << product.name << ", pret: " << product.price << ".\n";
     return os;
 }
 

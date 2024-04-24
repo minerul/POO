@@ -28,3 +28,7 @@ void Payment::setCartCost(int cartCost) {
 void Payment::setTotalMoney(int totalMoney) {
     Payment::totalMoney = totalMoney;
 }
+
+string Payment::toString() {
+    return std::string();
+}

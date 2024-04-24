@@ -4,7 +4,8 @@
 
 #ifndef POO_PAYMENT_H
 #define POO_PAYMENT_H
-
+#include <iostream>
+using namespace std;
 
 class Payment {
 protected:
@@ -21,6 +22,7 @@ public:
 
     void setCartCost(int cartCost);
 
+    virtual string toString();
     virtual void processPayment();
     virtual void read();
 

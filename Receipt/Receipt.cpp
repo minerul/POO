@@ -5,9 +5,10 @@
 #include "Receipt.h"
 
 
-Receipt::Receipt(int id, vector<Product> products) {
+Receipt::Receipt(int id, vector<Product> products, string details) {
     this->id=id;
     this->products=products;
+    this->details=details;
 }
 
 const vector<Product> &Receipt::getProducts() const {
@@ -19,9 +20,15 @@ int Receipt::getId() const {
 }
 
 std::ostream& operator<<(std::ostream& os, const Receipt& receipt) {
-    os << "Receipt ID: " << receipt.getId() << "\nProducts:\n";
+    os<<"--------------------BON--------------------\n";
+    os << "Numarul bonului: " << receipt.getId() <<"\n"<<receipt.getDetails()<< "Produsele cumparate:\n";
     for (const auto& product : receipt.getProducts()) {
         os << product;
     }
+    os<<"--------------------BON--------------------\n";
     return os;
+}
+
+const string &Receipt::getDetails() const {
+    return details;
 }

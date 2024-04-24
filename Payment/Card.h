@@ -15,6 +15,8 @@ public:
     void read();
 
     int getChange();
+
+    string toString();
 };
 
 

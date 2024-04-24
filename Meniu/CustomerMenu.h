@@ -9,7 +9,7 @@ public:
     const Store &getStore() const;
 
 private:
-    const string CUSTOMER_OPTION_TEXT = "------------CLIENT------------\n"
+    const string CUSTOMER_OPTION_TEXT = "----------------------CLIENT----------------------\n"
                                         "Apasa tasta corespunzatoare actiunii pe care doresti sa o faci:\n"
                                         "1.Adauga produs in cos.\n"
                                         "2.Afiseaza cosul.\n"
@@ -17,6 +17,7 @@ private:
                                         "4.Goleste cosul.\n"
                                         "5.Vezi pretul cosului.\n"
                                         "6.Achizitioneaza cosul.\n"
+                                        "7.Vezi bonurile.\n"
                                         "0.Inapoi la meniul principal\n";
 public:
     CustomerMenu(const Store& store);

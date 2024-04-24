@@ -13,7 +13,10 @@ int checkInt(string x) {
     return -1;
 }
 
-
+string Cash::toString(){
+    string s = "Plata cash. Pret total: "+to_string(cartCost) + ". Suma acordata: " +to_string(this->totalMoney) + ". Rest: " + to_string(this->totalMoney-this->cartCost)+".\n";
+    return s;
+}
 void Cash::read() {
     string amountString;
     int amount = -1;
