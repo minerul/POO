@@ -1,7 +1,3 @@
-//
-// Created by Samer El Abassi on 20.04.2024.
-//
-
 #ifndef POO_PRODUCTSERVICE_H
 #define POO_PRODUCTSERVICE_H
 

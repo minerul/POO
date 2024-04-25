@@ -11,11 +11,12 @@ class ReceiptService {
     Payment payment;
 public:
     ReceiptService();
-    void createReceipt(vector <Product> products, string details);
 
     void showLastReceipt();
 
     void viewReceipts();
+
+    void createReceipt(vector<Product> products, shared_ptr<Payment> payment);
 };
 
 

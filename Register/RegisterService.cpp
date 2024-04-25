@@ -3,15 +3,17 @@
 
 RegisterService::RegisterService(CartService *cartService) : cartService(cartService) {
 }
-void RegisterService::viewReceipts(){
+
+void RegisterService::viewReceipts() {
     receiptService.viewReceipts();
 }
+
 void RegisterService::buyCart() {
     Cart cart = cartService->getCart();
-    Payment &payment = paymentService.choosePayment();
-    payment.setCartCost(cartService->checkPrice());
+    shared_ptr<Payment> payment = paymentService.choosePayment();
+    payment->setCartCost(cartService->checkPrice());
     paymentService.processPayment(payment);
-    receiptService.createReceipt(cart.getProducts(),payment.toString());
+    receiptService.createReceipt(cart.getProducts(), payment);
 
     cout << "Apasa orice tasta pentru a vizualiza bonul:";
     cin.get();

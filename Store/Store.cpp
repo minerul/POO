@@ -2,10 +2,10 @@
 #include <iostream>
 
 
-Store::Store(Store &other) {
+Store::Store(Store &other) { // copiere
     productService = other.getProductService();
     registerService = other.getRegisterService();
-    cartService = other.getCartService();// Shallow copy for ProductService
+    cartService = other.getCartService();
 }
 
 Store::~Store() {}

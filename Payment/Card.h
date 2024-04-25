@@ -10,7 +10,6 @@ class Card : public Payment{
     int cardNumber;
 public:
     Card();
-    //Card(int totalMoney);
 
     void read();
 

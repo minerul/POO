@@ -8,9 +8,6 @@
 #include "../Receipt/ReceiptService.h"
 
 class RegisterService {
-
-
-
     CartService *cartService;
     ReceiptService receiptService;
     PaymentService paymentService;

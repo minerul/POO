@@ -1,7 +1,3 @@
-//
-// Created by alext on 4/21/2024.
-//
-
 #ifndef POO_MENU_H
 #define POO_MENU_H
 

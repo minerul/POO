@@ -2,6 +2,9 @@
 #include <iostream>
 using namespace std;
 
+Payment::Payment() {
+
+}
 void Payment::read() {
 
 }

@@ -12,11 +12,12 @@ int main() {
     menu.start();
     return 0;
 }
-//goForward
 //--minim o baza de clasa 3 si 3 clase derivate -> menu si payment
 //--o functie virtuala specifica temei -> menu, paymentMethodurile
-//--polimorfism -> utils,
+//--polimorfism -> utils, productService::addpProduct
 //--apelarea constructorului clasei de baza din constructori ai clasei derivate-> menu, cash, card
-// smart pointers
+//--smart pointers
 //--conversii de tipuri pentru pointeri catre clase->PaymentService::processPayment, caut conversii
 //--suprascris metode cred? si static-> static in utils, metodele <<, atribute static am id in receipt
+
+// de la cash la payment trebuie pointer payment, dar shared ptr e smart. verific dif shared/unique

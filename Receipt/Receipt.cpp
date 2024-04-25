@@ -6,10 +6,11 @@
 
 int Receipt::counter = 0;
 
-Receipt::Receipt(int id, vector<Product> products, string details) {
+
+Receipt::Receipt(int id, vector<Product> products, shared_ptr<Payment> payment) : payment(payment) {
     this->id = id;
     this->products = products;
-    this->details = details;
+    this->payment = payment;
 }
 
 const vector<Product> &Receipt::getProducts() const {
@@ -19,10 +20,13 @@ const vector<Product> &Receipt::getProducts() const {
 int Receipt::getId() const {
     return id;
 }
+shared_ptr<Payment> Receipt::getPayment() const {
+    return payment;
+}
 
 std::ostream &operator<<(std::ostream &os, const Receipt &receipt) {
     os << "--------------------BON--------------------\n";
-    os << "Numarul bonului: " << receipt.getId() << "\n" << receipt.getDetails() << "Produsele cumparate:\n";
+    os << "Numarul bonului: " << receipt.getId() << "\n" << receipt.getPayment()->toString() << "Produsele cumparate:\n";
     for (const auto &product: receipt.getProducts()) {
         os << product;
     }
@@ -30,9 +34,6 @@ std::ostream &operator<<(std::ostream &os, const Receipt &receipt) {
     return os;
 }
 
-const string &Receipt::getDetails() const {
-    return details;
-}
 
 int Receipt::getCounter() {
     return counter;

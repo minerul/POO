@@ -25,7 +25,7 @@ add_executable(POO main.cpp
         Cart/Cart.cpp
         Cart/Cart.h
         Cart/CartService.cpp
-        Cart/CartService.h
+        Cart/CartService.h.//
         Meniu/Menu.cpp
         Meniu/Menu.h
         Receipt/Receipt.cpp

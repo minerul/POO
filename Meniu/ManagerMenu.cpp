@@ -4,7 +4,7 @@
 
 #include "ManagerMenu.h"
 
-ManagerMenu::ManagerMenu(const Store &store) : Menu(store) { // copy
+ManagerMenu::ManagerMenu(const Store &store) : Menu(store) {
 }
 
 
