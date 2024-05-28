@@ -1,7 +1,6 @@
 #include "Product/Product.h"
 
 
-
 #include <vector>
 #include <ostream>
 #include <memory>
@@ -19,16 +18,20 @@ class Store {
     CartService *cartService; // smart pointer
     RegisterService registerService;
     ReceiptService receiptService;
-public:
-    ProductService getProductService() const;
-
-    CartService* getCartService() const;
-
-    Store() = default;
+    static Store* instance;
 
     Store(Store &other);
-
     Store(ProductService productService, CartService *cartService, RegisterService registerService);
+
+public:
+
+
+
+    ProductService getProductService() const;
+
+    CartService *getCartService() const;
+
+    Store() = default;
 
     void showProducts();
 
@@ -48,7 +51,6 @@ public:
     void changePrice();
 
 
-
     virtual ~Store();
 
 
@@ -61,7 +63,7 @@ public:
     void emptyCart();
 
 
-    RegisterService getRegisterService() ;
+    RegisterService getRegisterService();
 
     void checkCartPrice();
 
