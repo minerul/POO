@@ -7,8 +7,8 @@ int main() {
     ProductService productService;
     CartService cartService;
     RegisterService registerService(&cartService);
-    Store store(productService, &cartService, registerService);
-    MainMenu menu(store);
+//    Store *store = Store::GetInstance(productService, &cartService, registerService);
+    MainMenu menu(*Store::GetInstance(productService, &cartService, registerService));
     menu.start();
     return 0;
 }

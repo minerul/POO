@@ -18,13 +18,14 @@ class Store {
     CartService *cartService; // smart pointer
     RegisterService registerService;
     ReceiptService receiptService;
-    static Store* instance;
 
-    Store(Store &other);
+protected:
     Store(ProductService productService, CartService *cartService, RegisterService registerService);
+    static Store *instance;
 
 public:
 
+    Store(Store &other) = delete; // nu trebuie sa poata fi copiati
 
 
     ProductService getProductService() const;
@@ -68,6 +69,8 @@ public:
     void checkCartPrice();
 
     void viewReceipts();
+
+    static Store *GetInstance(ProductService productService, CartService *cartService, RegisterService registerService);
 };
 
 

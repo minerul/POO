@@ -4,16 +4,12 @@
 Store *Store::GetInstance(ProductService productService, CartService *cartService, RegisterService registerService)
 {
     if(instance==nullptr){
-        instance = new Store(productService, &cartService, registerService);
+        instance = new Store(productService, cartService, registerService);
     }
     return instance;
 }
 
-Store::Store(Store &other) { // copiere
-    productService = other.getProductService();
-    registerService = other.getRegisterService();
-    cartService = other.getCartService();
-}
+Store *Store::instance = nullptr;
 
 Store::~Store() {}
 
