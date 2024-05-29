@@ -12,8 +12,7 @@ const unsigned long long int ReceiptService::getReceiptsSize() const {
 }
 
 void ReceiptService::viewReceipts() {
-    for (const auto &receipt: receipts)
-        cout << receipt;
+    utils.show(receipts);
 }
 
 void ReceiptService::showLastReceipt() {

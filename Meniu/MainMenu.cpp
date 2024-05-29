@@ -11,7 +11,7 @@ MainMenu::MainMenu(const Store &store) : Menu(store), customerMenu(store), manag
 void MainMenu::start() {
     while (true) {
         cout << MENU_TEXT;
-        int option = utils.readOption(0, 2);
+        int option = utils.readOption(0, 3);
         if (option == 0)
             break;
         switch (option) {
@@ -23,6 +23,9 @@ void MainMenu::start() {
                 break;
             case 2:
                 customerMenu.start();
+                break;
+            case 3:
+                store.showInitialProducts();
                 break;
             }
     }

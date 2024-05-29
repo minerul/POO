@@ -11,6 +11,7 @@ class MainMenu : public Menu {
     const string MENU_TEXT = "Alege perspectiva:\n"
                              "1.Manager.\n"
                              "2.Client.\n"
+                             "3.Afiseaza produsele cu care a inceput magazinul.\n"
                              "0.Inchide meniul.\n";
     ManagerMenu managerMenu;
     CustomerMenu customerMenu;

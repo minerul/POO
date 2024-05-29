@@ -4,11 +4,13 @@
 
 #include "Receipt.h"
 #include "../Payment/Payment.h"
+#include "../Utils/Utils.h"
 #include <vector>
 
 class ReceiptService {
     vector<Receipt> receipts;
     Payment payment;
+    Utils utils;
 
 public:
     ReceiptService();

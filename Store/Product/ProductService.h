@@ -5,16 +5,18 @@
 #include <vector>
 #include "Product.h"
 #include "../../Utils/Utils.h"
-class ProductService {
+#include "../../Service.h"
 
-    vector<Product> products;
-    Utils utils;
+class ProductService : public Service<Product> {
+
+//    vector<Product> products;
+//    Utils utils;
 
 public:
     ProductService();
     ProductService(const ProductService& other);
-    void addProduct(Product product);
-    void addProduct();
+//    void addProduct(Product product);
+//    void addProduct();
 
     void removeProduct();
 
@@ -32,6 +34,8 @@ public:
 
 
     vector<Product> showProducts(vector<Product> productList);
+
+    void showInitialProducts();
 };
 
 

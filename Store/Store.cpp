@@ -1,9 +1,8 @@
 #include "Store.h"
 #include <iostream>
 
-Store *Store::GetInstance(ProductService productService, CartService *cartService, RegisterService registerService)
-{
-    if(instance==nullptr){
+Store *Store::GetInstance(ProductService productService, CartService *cartService, RegisterService registerService) {
+    if (instance == nullptr) {
         instance = new Store(productService, cartService, registerService);
     }
     return instance;
@@ -23,6 +22,11 @@ void Store::addProduct() {
 
 void Store::showProducts() {
     productService.showProducts();
+
+}
+
+void Store::showInitialProducts() {
+    productService.showInitialProducts();
 }
 
 void Store::changePrice() {
@@ -57,7 +61,8 @@ void Store::removeItemFromCart() {
 void Store::buyCart() {
     registerService.buyCart();
 }
-void Store::viewReceipts(){
+
+void Store::viewReceipts() {
     registerService.viewReceipts();
 }
 
@@ -67,7 +72,7 @@ void Store::checkCartPrice() {
 }
 
 void Store::emptyCart() {
-    cout<<"Cosul a fost golit!\n";
+    cout << "Cosul a fost golit!\n";
     cartService->emptyCart();
 }
 

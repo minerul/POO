@@ -71,6 +71,8 @@ public:
     void viewReceipts();
 
     static Store *GetInstance(ProductService productService, CartService *cartService, RegisterService registerService);
+
+    void showInitialProducts();
 };
 
 
