@@ -25,6 +25,7 @@ void Card::read(){
         cin >> cardNumberString;
         cardNumber = validareNumar(cardNumberString);
     };
+    this->totalMoney=this->cartCost;
 }
 Card::Card() {
 
@@ -32,3 +33,4 @@ Card::Card() {
 int Card::getChange(){
     return 0;
 }
+

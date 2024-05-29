@@ -13,10 +13,12 @@ int checkInt(string x) {
     return -1;
 }
 
-string Cash::toString(){
-    string s = "Plata cash. Pret total: "+to_string(cartCost) + ". Suma acordata: " +to_string(this->totalMoney) + ". Rest: " + to_string(this->totalMoney-this->cartCost)+".\n";
+string Cash::toString() {
+    string s = "Plata cash. Pret total: " + to_string(cartCost) + ". Suma acordata: " + to_string(this->totalMoney) +
+               ". Rest: " + to_string(this->totalMoney - this->cartCost) + ".\n";
     return s;
 }
+
 void Cash::read() {
     string amountString;
     int amount = -1;
@@ -24,9 +26,9 @@ void Cash::read() {
         cout << "Introdu suma cash:\n";
         cin >> amountString;
         amount = checkInt(amountString);
-        if(amount<cartCost){
-            cout<<"Nu ai platit suficient!\n";
-            amount=-1;
+        if (amount < cartCost) {
+            cout << "Nu ai platit suficient!\n";
+            amount = -1;
         }
     }
     this->totalMoney = amount;
@@ -38,7 +40,7 @@ Cash::Cash() {
 }
 
 int Cash::getChange() {
-    return totalMoney-cartCost;
+    return totalMoney - cartCost;
 }
 
 //Cash::Cash(int totalMoney) {

@@ -44,4 +44,6 @@ add_executable(POO main.cpp
         Payment/Cash.h
         Payment/Revolut.cpp
         Payment/Revolut.h
+        Receipt/ReceiptBuilder.cpp
+        Receipt/ReceiptBuilder.h
 )

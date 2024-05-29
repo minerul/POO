@@ -3,7 +3,6 @@
 #define POO_CARD_H
 #include <string>
 #include "Payment.h"
-
 using namespace std;
 
 class Card : public Payment{

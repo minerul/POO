@@ -6,14 +6,10 @@ using namespace std;
 ReceiptService::ReceiptService() {
 }
 
-void ReceiptService::createReceipt(vector<Product> products, shared_ptr<Payment> payment) {
-    int id = 1;
-    if (!receipts.empty())
-        id = receipts.size() + 1;
-    Receipt receipt(id, products, payment);
-    receipts.push_back(receipt);
-}
 
+const unsigned long long int ReceiptService::getReceiptsSize() const {
+    return receipts.size();
+}
 
 void ReceiptService::viewReceipts() {
     for (const auto &receipt: receipts)
@@ -22,5 +18,9 @@ void ReceiptService::viewReceipts() {
 
 void ReceiptService::showLastReceipt() {
     cout << receipts[receipts.size() - 1];
+}
+
+void ReceiptService::addReceipt(Receipt receipt) {
+    receipts.push_back(receipt);
 }
 

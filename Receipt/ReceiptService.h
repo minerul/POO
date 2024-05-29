@@ -7,16 +7,23 @@
 #include <vector>
 
 class ReceiptService {
-    vector <Receipt> receipts;
+    vector<Receipt> receipts;
     Payment payment;
+
 public:
     ReceiptService();
+
+    void addReceipt(Receipt receipt);
 
     void showLastReceipt();
 
     void viewReceipts();
 
     void createReceipt(vector<Product> products, shared_ptr<Payment> payment);
+
+    const vector<Receipt> &getReceipts() const;
+
+    const unsigned long long int getReceiptsSize() const;
 };
 
 

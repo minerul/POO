@@ -13,7 +13,9 @@ void RegisterService::buyCart() {
     shared_ptr<Payment> payment = paymentService.choosePayment();
     payment->setCartCost(cartService->checkPrice());
     paymentService.processPayment(payment);
-    receiptService.createReceipt(cart.getProducts(), payment);
+
+    Receipt receipt = receiptBuilder.setId(receiptService.getReceiptsSize()+1).setProducts(cart.getProducts()).setPayment(payment).build();
+    receiptService.addReceipt(receipt);
 
     cout << "Apasa orice tasta pentru a vizualiza bonul:";
     cin.get();
