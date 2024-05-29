@@ -5,7 +5,7 @@ RegisterService::RegisterService(CartService *cartService) : cartService(cartSer
 }
 
 void RegisterService::viewReceipts() {
-    receiptService.viewReceipts();
+    receiptService.viewItems();
 }
 
 void RegisterService::buyCart() {
@@ -15,7 +15,7 @@ void RegisterService::buyCart() {
     paymentService.processPayment(payment);
 
     Receipt receipt = receiptBuilder.setId(receiptService.getReceiptsSize()+1).setProducts(cart.getProducts()).setPayment(payment).build();
-    receiptService.addReceipt(receipt);
+    receiptService.addItem(receipt);
 
     cout << "Apasa orice tasta pentru a vizualiza bonul:";
     cin.get();

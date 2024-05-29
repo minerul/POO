@@ -24,12 +24,12 @@ public:
     Receipt build();
 
 
-    //    void ReceiptService::createReceipt(vector<Product> products, shared_ptr<Payment> payment) {
+    //    void ReceiptService::createReceipt(vector<Product> item, shared_ptr<Payment> payment) {
 //        int id = 1;
-//        if (!receipts.empty())
-//            id = receipts.size() + 1;
-//        Receipt receipt(id, products, payment);
-//        receipts.push_back(receipt);
+//        if (!items.empty())
+//            id = items.size() + 1;
+//        Receipt receipt(id, item, payment);
+//        items.push_back(receipt);
 //    }
 
 };

@@ -9,24 +9,21 @@
 
 class ProductService : public Service<Product> {
 
-//    vector<Product> products;
-//    Utils utils;
 
 public:
     ProductService();
     ProductService(const ProductService& other);
-//    void addProduct(Product product);
-//    void addProduct();
+//    void addItem(Product product);
+//    void addItem();
 
     void removeProduct();
 
     void changePrice();
 
-    vector <Product> showProducts();
 
     virtual ~ProductService();
 
-    const vector<Product> &getProducts() const;
+//    const vector<Product> &getProducts() const;
 
     vector<Product> loadInitialProducts();
 
@@ -36,6 +33,8 @@ public:
     vector<Product> showProducts(vector<Product> productList);
 
     void showInitialProducts();
+
+    Product readProduct();
 };
 
 

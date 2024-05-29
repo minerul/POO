@@ -4,11 +4,11 @@
 
 ProductService::ProductService() {
     utils = Utils();
-    products = loadInitialProducts();
+    items = loadInitialProducts();
 }
 
 ProductService::ProductService(const ProductService &other) {
-    products = other.getProducts();
+    items = other.getItems();
 }
 
 vector<Product> ProductService::loadInitialProducts() {
@@ -32,68 +32,61 @@ void ProductService::showInitialProducts() {
 }
 
 
-void ProductService::addProduct() {
+Product ProductService::readProduct() {
     Product product;
     cin >> product;
     if (!checkDuplicates(product)) {
-        addProduct(product);
+        return product;
     } else {
         cout << "Exista deja un produs cu acest name(" << product.getName() << ").\n";
     }
 }
 
-void ProductService::addProduct(Product product) { // polimorfism
-    products.push_back(product);
-}
+//void ProductService::addItem(Product product) { // polimorfism
+//    items.push_back(product);
+//}
 
 bool ProductService::checkDuplicates(Product product) {
-    for (const auto &i: products) {
+    for (const auto &i: items) {
         if (product == i)
             return true;
     }
     return false;
 }
 
-vector<Product> ProductService::showProducts(vector<Product> productList) {
-    for (int i = 0; i < productList.size(); i++) {
-        cout << i + 1 << ". " << productList[i];
-    }
-    return productList;
-}
-
-vector<Product> ProductService::showProducts() {
-//    for (int i = 0; i < products.size(); i++) {
-//        cout << i + 1 << ". " << products[i];
+//vector<Product> ProductService::showProducts(vector<Product> productList) {
+//    for (int i = 0; i < productList.size(); i++) {
+//        cout << i + 1 << ". " << productList[i];
 //    }
-//    return products;
-    Utils::show(products);
-    return products;
-}
+//    return productList;
+//}
+
+
 
 void ProductService::changePrice() {
-    showProducts();
+    viewItems();
     cout << "Alege un element din lista utilizand tasta corespunzatoare.\n";
     int option = Utils::readOption();
-    if (option != -1 && Utils::isNumberInInterval(option, 1, products.size())) {
+    if (option != -1 && Utils::isNumberInInterval(option, 1, items.size())) {
         cout << "Tasteaza pretul pe care-l doresti:\n";
         int newPrice;
         cin >> newPrice;
 
-        products[option - 1].setPrice(newPrice);
+        items[option - 1].setPrice(newPrice);
 
         cout << "Pretul a fost modificat. Lista produselor a devenit:\n";
-        showProducts();
+        viewItems();
     }
 }
 
 void ProductService::removeProduct() {
-    showProducts();
+    viewItems();
     cout << "Alege un element din lista utilizand tasta corespunzatoare.\n";
     int option = Utils::readOption();
-    if (option != -1 && Utils::isNumberInInterval(option, 1, products.size())) {
-        products.erase(products.begin() + option - 1);
+    if (option != -1 && Utils::isNumberInInterval(option, 1, items.size())) {
+        items.erase(items.begin() + option - 1);
         cout << "Produsul a fost sters. Lista produselor a devenit:\n";
-        showProducts();
+        viewItems();
     }
 }
 
@@ -101,9 +94,7 @@ ProductService::~ProductService() {
 
 }
 
-const vector<Product> &ProductService::getProducts() const {
-    return products;
-}
+
 
 
 

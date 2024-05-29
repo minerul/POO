@@ -5,21 +5,18 @@
 #include "Receipt.h"
 #include "../Payment/Payment.h"
 #include "../Utils/Utils.h"
+#include "../Service.h"
 #include <vector>
 
-class ReceiptService {
-    vector<Receipt> receipts;
+class ReceiptService: public Service<Receipt> {
     Payment payment;
-    Utils utils;
 
 public:
     ReceiptService();
 
-    void addReceipt(Receipt receipt);
 
     void showLastReceipt();
 
-    void viewReceipts();
 
     void createReceipt(vector<Product> products, shared_ptr<Payment> payment);
 

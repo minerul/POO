@@ -18,7 +18,7 @@ public:
 
     static int readOption(int st, int dr);
     template<typename T>
-    static void show(const std::vector<T> &vec) { // pentru products si receipts
+    static void show(const std::vector<T> &vec) { // pentru item si items
         for (int i = 0; i < vec.size(); i++) {
             cout << i + 1 << "." << vec[i];
         }

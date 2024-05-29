@@ -17,11 +17,11 @@ void Store::loadInitialProducts() {
 }
 
 void Store::addProduct() {
-    productService.addProduct();
+    productService.addItem(productService.readProduct());
 }
 
 void Store::showProducts() {
-    productService.showProducts();
+    productService.viewItems();
 
 }
 
@@ -42,7 +42,8 @@ ProductService Store::getProductService() const {
 }
 
 void Store::addProductToCart() {
-    vector<Product> products = productService.showProducts();
+    vector<Product> products = productService.getItems();
+    productService.viewItems();
     int option = Utils::readOption(); // functie statica
     cartService->addProductToCart(products[option - 1]);
 }
