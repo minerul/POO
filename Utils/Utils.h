@@ -17,14 +17,14 @@ public:
     static bool isNumberInInterval(int x, int st, int dr);
 
     static int readOption(int st, int dr);
+
     template<typename T>
-    static void show(const std::vector<T> &vec) { // pentru item si items
+    static void show(const std::vector<T> &vec) { //
         for (int i = 0; i < vec.size(); i++) {
             cout << i + 1 << "." << vec[i];
         }
         cout << endl;
     }
-
     static void show(const std::vector<string> &vec) { // template specialization
         for (int i = 0; i < vec.size(); i++) {
             cout<<vec[i]<<".\n";

@@ -25,7 +25,7 @@ shared_ptr<Payment> Receipt::getPayment() const {
 }
 
 std::ostream &operator<<(std::ostream &os, const Receipt &receipt) {
-    os << "--------------------BON--------------------\n";
+    os << "-------------------BON-------------------\n";
     os << "Numarul bonului: " << receipt.getId() << "\n" << receipt.getPayment()->toString() << "Produsele cumparate:\n";
     for (const auto &product: receipt.getProducts()) {
         os << product;
